@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+ul.chat-users-wrapper {
+  list-style: none;
+}
+
+.chat-users-wrapper {
+  height: 250px;
+  width: 360px;
+  overflow-y: scroll;
+  border: 1px solid #F4F4F4;
+}
+
+.chat-user-wrapper {
+  padding: 10px;
+  border-bottom: 1px solid #F4F4F4;
+  min-height: 75px;
+  display: flex; /* avatarとmain（name,time,message）を並べる */
+}
+
+/* .chat-user-wrapperに定義統一するため削除
+.chat-user-wrapper.is-active {
+  background-color: #F4F4F4;
+}
+*/
+
+.chat-user-avatar {
+  margin-right: 15px;
+}
+
+.chat-user-avatar img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  background-color: #F4F4F4;
+}
+
+.last-chat-time, .last-chat-message {
+  font-size: 0.9em;
+  color: #9E9F9F;
+  white-space: nowrap; /* テキストを折り返さず１行で表示 */
+  overflow: hidden;    /* テキストがはみ出した部分を隠す */
+  text-overflow: ellipsis; /* テキストを省略表示... */
+}
+
+.last-chat-message{
+  width:256px; /* テキスト幅を規定 QUESTION: 長いテキストの場合、幅が少し広がってしまうため定義。もっといい方法は？ */*/
+}
+
+.chat-user-main{
+  width:360px; /* name、time、message全体(main)のクラス幅を定義 QUESTION: 直接定義だと汎用性なし。いい方法？ */
+}
+
+.chat-user-main-upper{
+  display: flex; /* 名前と時間を横に並べる */
+  justify-content: space-between; /* 名前と時間を左側、右側に配置 */
+}
