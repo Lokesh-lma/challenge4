@@ -23,16 +23,17 @@ ul.chat-users-wrapper {
   border-bottom: 1px solid #F4F4F4;
   min-height: 75px;
   display: flex; /* avatarとmain（name,time,message）を並べる */
+  align-items: center;
 }
 
-/* .chat-user-wrapperに定義統一するため削除
 .chat-user-wrapper.is-active {
   background-color: #F4F4F4;
 }
-*/
 
 .chat-user-avatar {
   margin-right: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .chat-user-avatar img {
@@ -51,11 +52,14 @@ ul.chat-users-wrapper {
 }
 
 .last-chat-message{
-  width:256px; /* テキスト幅を規定 QUESTION: 長いテキストの場合、幅が少し広がってしまうため定義。もっといい方法は？ */*/
+  max-width: 100%;
 }
 
 .chat-user-main{
-  width:360px; /* name、time、message全体(main)のクラス幅を定義 QUESTION: 直接定義だと汎用性なし。いい方法？ */
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: calc(100% - 65px);
 }
 
 .chat-user-main-upper{
