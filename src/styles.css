@@ -26,14 +26,14 @@ ul.chat-users-wrapper {
   align-items: center;
 }
 
-.chat-user-wrapper.is-active {
+.chat-user-wrapper.is-active { /* .chat-user-wrapperの追加定義を.is-activeクラスで定義 */
   background-color: #F4F4F4;
 }
 
 .chat-user-avatar {
   margin-right: 15px;
   display: flex;
-  align-items: center;
+  align-items: center; /* 垂直方向の中心に位置合わせ */
 }
 
 .chat-user-avatar img {
@@ -52,14 +52,14 @@ ul.chat-users-wrapper {
 }
 
 .last-chat-message{
-  max-width: 100%;
+  max-width: 100%; /* 親要素(chat-user-main)のwidthと同じになる */
 }
 
 .chat-user-main{
-  display: flex;
+  display: flex;  /* flexボックスにして上下にcolumnで並べる */
   flex-direction: column;
   align-content: center;
-  width: calc(100% - 65px);
+  width: calc(100% - 65px); /* 親クラス(chat-user-wrapper)のwidth(323px)を100%として323px-65px=258px */
 }
 
 .chat-user-main-upper{
